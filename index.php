@@ -58,9 +58,9 @@ function fonctionDepartement($departement){
             $csv = 'myfile.csv';
 
             $csv = read($csv);
-echo '<pre>';
-print_r($csv);
-echo '</pre>';
+            echo '<pre>';
+            print_r($csv);
+            echo '</pre>';
 
     // foreach ($array as $ville) {
     //     if ($valeur == $ville) {
