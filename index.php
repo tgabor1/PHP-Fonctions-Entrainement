@@ -135,13 +135,13 @@
 
 
 // Exercice 10
-function meilleurSalaire() {
-    require('tableau_datas.php');
-    $listeSalaires = [];
-    foreach($tableau as $employe) {
-        array_push($listeSalaires, (str_replace(["$",","], ["",""], $employe[5])));
-    }
-    echo $tableau[array_search(max($listeSalaires), $listeSalaires)][0];
-}
-meilleurSalaire();
+// function meilleurSalaire() {
+//     require "tableau_datas.php";
+//     $listeSalaires = [];
+//     foreach($tableau as $employe) {
+//         array_push($listeSalaires, (str_replace(["$",","], ["",""], $employe[5])));
+//     }
+//     echo $tableau[array_search(max($listeSalaires), $listeSalaires)][0];
+// }
+// meilleurSalaire();
 ?>
