@@ -1,9 +1,7 @@
 <?php
-
 // Exercice 1
 // $joursFeries = ["01/01", "18/04", "01/05", "08/05", "26/05", "06/06", "14/07", "15/08", "01/11", "11/11", "25/12"];
 // $date = "01/01";
-
 // function fonctionJoursFeries($valeur, $array){
 //     foreach ($array as $jourFerie){
 //         if ($valeur == $jourFerie){
@@ -50,7 +48,6 @@
 
 // Exercice 4
 // $numDep = "";
-
 // function departement($numDep){
 //     if (($handle = fopen("departement.csv", "r")) !== FALSE){
 //         while (($data = fgetcsv($handle, 1000, ",")) !== FALSE){
@@ -67,7 +64,6 @@
 
 // Exercice 5
 // $numDep = "";
-
 // function departement($numDep){
 //     if (($handle = fopen("villes_france.csv", "r")) !== FALSE){
 //         while (($data = fgetcsv($handle, 1000, ",")) !== FALSE){
@@ -83,30 +79,69 @@
 
 
 // Exercice 6
-$date = "Monday 25th of July 2022";
-
-// Affichage de quelque chose comme : Monday 8th of August 2005
-// echo date('l jS \of F Y');
-
-function fonctionDate($date){
-    setlocale(LC_ALL, 'fr_FR.UTF8', 'fr_FR','fr','fr','fra','fr_FR@euro');
-    echo "Aujourd'hui nous sommes le ".strftime("%A %d %B %Y");
-    // echo "Aujourd'hui nous sommes le " . strftime($date);
-}
-print_r(fonctionDate($date))
-
-
-
-// $date = "Monday 8th of August 2005";
-
-// // Affichage de quelque chose comme : Monday 8th of August 2005
-// // echo date('l jS \of F Y');
-
-// function fonctionDate($date){
-//     setlocale(LC_ALL, 'fr_FR.UTF8', 'fr_FR','fr','fr','fra','fr_FR@euro');
-//     // echo "Aujourd'hui nous sommes le ".strftime("%A %d %B %Y");
-//     echo "Aujourd'hui nous sommes le " . strftime($date);
+// function weekDay($date){
+//     $weekDay = date("l", strtotime($date));
+//     // on remplace les mots par des autres
+//     $weekDay = str_replace(["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"], $weekDay);
+//     return $weekDay;
 // }
-// print_r(fonctionDate($date))
+// echo weekDay("09/01/22");
 
+
+
+// Exercice 7
+// function parking($nomParking){
+//     if (($handle = fopen("occupation-parkings-temps-reel.csv", "r")) !== FALSE){
+//         while (($data = fgetcsv($handle, 1000, ";")) !== FALSE){
+//                 if ($nomParking == $data[0]){
+//                     return $data[4];
+//                 }
+//         }
+//         fclose($handle);
+//     }
+// }
+// echo parking("Parking Gutenberg");
+
+
+
+// Exercice 8
+// function parking($nomParking){
+//     if (($handle = fopen("occupation-parkings-temps-reel.csv", "r")) !== FALSE){
+//         while (($data = fgetcsv($handle, 1000, ";")) !== FALSE){
+//                 if ($nomParking == $data[0]){
+//                     return $data[6];
+//                 }
+//         }
+//         fclose($handle);
+//     }
+// }
+// echo parking("Parking Gutenberg");
+
+
+
+// Exercice 9
+// function nmbrePersonnes($valeur){
+//     include "tableau_datas.php";
+//     $i = 0;
+//     foreach ($tableau as $personnes){
+//         if ($valeur == $personnes[2]){
+//             $i++;
+//         }
+//     }
+//     return $i;
+//     }
+// echo nmbrePersonnes("Edinburgh");
+
+
+
+// Exercice 10
+function meilleurSalaire() {
+    require('tableau_datas.php');
+    $listeSalaires = [];
+    foreach($tableau as $employe) {
+        array_push($listeSalaires, (str_replace(["$",","], ["",""], $employe[5])));
+    }
+    echo $tableau[array_search(max($listeSalaires), $listeSalaires)][0];
+}
+meilleurSalaire();
 ?>
