@@ -97,9 +97,6 @@ print_r(fonctionDate($date))
 
 
 
-
-
-
 // $date = "Monday 8th of August 2005";
 
 // // Affichage de quelque chose comme : Monday 8th of August 2005
@@ -111,6 +108,5 @@ print_r(fonctionDate($date))
 //     echo "Aujourd'hui nous sommes le " . strftime($date);
 // }
 // print_r(fonctionDate($date))
-
 
 ?>
