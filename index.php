@@ -1,16 +1,16 @@
 <?php
 // Exercice 1
-// $joursFeries = ["01/01", "18/04", "01/05", "08/05", "26/05", "06/06", "14/07", "15/08", "01/11", "11/11", "25/12"];
-// $date = "01/01";
-// function fonctionJoursFeries($valeur, $array){
-//     foreach ($array as $jourFerie){
-//         if ($valeur == $jourFerie){
-//             return "vrai";
-//         }
-//     }
-//     return "faux";
-// }
-// print_r(fonctionJoursFeries($date, $joursFeries));
+$joursFeries = ["01/01", "18/04", "01/05", "08/05", "26/05", "06/06", "14/07", "15/08", "01/11", "11/11", "25/12"];
+$date = "01/01";
+function fonctionJoursFeries($valeur, $array){
+    foreach ($array as $jourFerie){
+        if ($valeur == $jourFerie){
+            return "vrai";
+        }
+    }
+    return "faux";
+}
+print_r(fonctionJoursFeries($date, $joursFeries));
 
 
 
